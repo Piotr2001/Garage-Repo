@@ -87,7 +87,12 @@ def add_vehicle():
         print("Not a valid input")
 
 def Quote_Vehicle():
-    print("Test")
+    cost = 100
+    
+    if condition == "A":
+        cost = cost * 1.2
+    elif condition == "B":
+        cost = cost * 1.5
     
 class Vehicle:
     def __init__(self, reg, colour, condition):
