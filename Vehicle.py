@@ -14,21 +14,24 @@ def Function_select():
     return V
 
 def working():
+    E = 0
     V = Function_select()
-    if V == 1:
-        List_Garage()
-    elif V == 2:
-        add_vehicle()
-    elif V == 3:
-        print ("3")
-    elif V == 4:
-        print ("4")
-    elif V == 5:
-        print ("5")
-    elif V == 6:
-        print ("6")
-    else:
-        print ("Not a valid input")
+    while E != 6:
+        if V == 1:
+            List_Garage()
+        elif V == 2:
+            add_vehicle()
+        elif V == 3:
+            print ("3")
+        elif V == 4:
+            print ("4")
+        elif V == 5:
+            Quote_Vehicle()
+        elif V == 6:
+            print("You have decided to exit.")
+            E = 6
+        else:
+            print ("Not a valid input")
 
 def List_Garage():
     for vehicle in Garage:
@@ -83,7 +86,8 @@ def add_vehicle():
     else:
         print("Not a valid input")
 
-
+def Quote_Vehicle():
+    print("Test")
     
 class Vehicle:
     def __init__(self, reg, colour, condition):
